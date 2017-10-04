@@ -165,6 +165,12 @@ class Box(object):
         #    and continue working on the problem.
         # --------------------------------------------------------------
 
+        s = ''
+
+        if (len(self.contents) + len(additional_contents)) < self.volume:
+            self.contents = self.contents + additional_contents
+        else:
+
     def double(self):
         """
         What comes in:
