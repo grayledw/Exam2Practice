@@ -163,6 +163,13 @@ def practice_problem3a(circles):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
+    total = circles[0].center.x
+    print(total)
+
+    # for k in range(len(circles)):
+    #     total = total * circles[k + 1]
+    #
+    # return total
 
 
 def run_test_practice_problem3b():
