@@ -40,7 +40,7 @@ def main():
     ####################################################################
 
     run_test_init()
-#     run_test_append_string()
+    run_test_append_string()
 #     run_test_double()
 #     run_test_shrink()
 #     run_test_double_then_shrink()
@@ -165,11 +165,23 @@ class Box(object):
         #    and continue working on the problem.
         # --------------------------------------------------------------
 
-        s = ''
+        new_content = ''
+        to_return = ''
 
-        if (len(self.contents) + len(additional_contents)) < self.volume:
-            self.contents = self.contents + additional_contents
-        else:
+        length = self.volume - len(self.contents)
+
+        if length > len(additional_contents):
+            length = len(additional_contents)
+
+        for k in range(length):
+            new_content = new_content + additional_contents[k]
+
+        self.contents = self.contents + new_content
+
+        for k in range (len(additional_contents) - length):
+            to_return = to_return + additional_contents[k + length]
+
+        return to_return
 
     def double(self):
         """
