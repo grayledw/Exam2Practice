@@ -56,6 +56,34 @@ def run_test_practice_problem2a():
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
 
+    #Test 1
+    sequence = [0, 1, 2, 3]
+    delta = 1
+    expected = [1, 2, 3, 4]
+    print("Expected:", expected)
+    print("Actual:", practice_problem2a(sequence, delta))
+
+    # Test 2
+    sequence = [0, 1, 2, 3]
+    delta = 2
+    expected = [2, 3, 4, 5]
+    print("Expected:", expected)
+    print("Actual:", practice_problem2a(sequence, delta))
+
+    # Test 1
+    sequence = [0, 1, 2, 3]
+    delta = 3
+    expected = [3, 4, 5, 6]
+    print("Expected:", expected)
+    print("Actual:", practice_problem2a(sequence, delta))
+
+    # Test 1
+    sequence = [0, 1, 2, 3]
+    delta = 4
+    expected = [4, 5, 6, 7]
+    print("Expected:", expected)
+    print("Actual:", practice_problem2a(sequence, delta))
+
 
 def practice_problem2a(sequence, delta):
     """
@@ -76,13 +104,20 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ####################################################################
+
+    new_list = []
+
+    for k in range(len(sequence)):
+        new_list = new_list + [(sequence[k] + delta)]
+
+    return new_list
 
 
 def run_test_practice_problem2b():
