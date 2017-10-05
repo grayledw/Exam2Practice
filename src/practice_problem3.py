@@ -369,13 +369,21 @@ def practice_problem3c(sequence):
       :type: sequence: list    or tuple or string
     """
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes.
     ####################################################################
+
+    list_of_integer_locations = []
+
+    for k in range(len(sequence)):
+        if sequence[k] == 0:
+            list_of_integer_locations = list_of_integer_locations + [k]
+
+    return list_of_integer_locations
 
 
 def run_test_practice_problem3d():
