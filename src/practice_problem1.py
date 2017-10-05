@@ -44,7 +44,7 @@ def main():
     run_test_double()
     run_test_shrink()
     run_test_double_then_shrink()
-    run_test_reset()
+    # run_test_reset()
 #     run_test_steal()
 #     run_test_get_history()
 #     run_test_combined_box()
@@ -365,7 +365,7 @@ class Box(object):
           :type new_volume: int
         """
         # --------------------------------------------------------------
-        # TODO: 6. Implement and test this function.
+        # Done: 6. Implement and test this function.
         #     The testing code is already written for you (above).
         # --------------------------------------------------------------
         # --------------------------------------------------------------
@@ -373,6 +373,15 @@ class Box(object):
         #    DIFFICULTY:      5
         #    TIME ESTIMATE:   5 minutes.
         # --------------------------------------------------------------
+
+        # self.volume = new_volume
+        # clipped = self.double()
+        # total = len(self.shrink(new_volume) + clipped)
+        # return total
+
+        clipped1 = self.double()
+        clipped2 = self.shrink(new_volume)
+        return len(clipped1 + clipped2)
 
     def reset(self):
         """
