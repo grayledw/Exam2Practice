@@ -459,7 +459,7 @@ def practice_problem3d(sequence):
       :type: sequence: list    or tuple or string
     """
     ####################################################################
-    # TODO: 5. Implement and test this function.
+    # Done: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -467,6 +467,11 @@ def practice_problem3d(sequence):
     #    TIME ESTIMATE:   8 minutes for each part of this problem.
     ####################################################################
 
+    for k in range(len(sequence)):
+        if sequence[k] == 0:
+            return k
+
+    return -1
 
     ####################################################################
     # TODO: 6. Just ABOVE this TODO, you should have implemented
