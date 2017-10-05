@@ -45,7 +45,7 @@ def main():
     run_test_shrink()
     run_test_double_then_shrink()
     run_test_reset()
-#     run_test_steal()
+    run_test_steal()
 #     run_test_get_history()
 #     run_test_combined_box()
 
@@ -429,7 +429,7 @@ class Box(object):
           :type other_box: Box
         """
         # --------------------------------------------------------------
-        # TODO: 8. Implement and test this function.
+        # Done: 8. Implement and test this function.
         #     The testing code is already written for you (above).
         # --------------------------------------------------------------
         # --------------------------------------------------------------
@@ -441,6 +441,9 @@ class Box(object):
         # FOR FULL CREDIT, YOUR SOLUTION MUST BE NO MORE THAN
         #    ** TWO **   LINES OF CODE.
         ################################################################
+
+        string = self.append_string(other_box.contents)
+        other_box.contents = string
 
     def get_history(self):
         """
